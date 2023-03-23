@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%= JSON.stringify(user_id) %>
+    <form action="/edit_user" method="post">
+      <fieldset>
+        <legend>edit User:</legend>
+        <label for="fname">Email:</label>
+        <input
+          type="text"
+          id="fname"
+          name="Id"
+          value="<%= user_id._id %>"
+          style="display: none"
+        />
+        <input
+          type="text"
+          id="fname"
+          name="Email"
+          value="<%= user_id.Email %>"
+        /><br /><br />
+        <label for="lname">Name:</label>
+        <input
+          type="text"
+          id="lname"
+          name="Name"
+          value="<%= user_id.Name %>"
+        /><br /><br />
+        <label for="email">City:</label>
+        <input
+          type="text"
+          id="email"
+          name="City"
+          value="<%= user_id.City %>"
+        /><br /><br />
+
+        <input type="submit" value="Submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>
